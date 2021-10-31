@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="651.0" prefWidth="1029.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="controller.ModifypartController">
+       <children>
+      <Button layoutX="550.0" layoutY="562.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="49.0" prefWidth="83.0" text="Cancel" />
+      <Label layoutX="37.0" layoutY="14.0" prefHeight="98.0" prefWidth="218.0" style="-fx-font-weight: bold;" text="Modify Part">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="206.0" text="ID">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="103.0" layoutY="253.0" text="Name">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="96.0" layoutY="297.0" text="Inventory">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="99.0" layoutY="341.0" text="Price">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="101.0" layoutY="390.0" text="Max">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="partIdNameLabel" layoutX="99.0" layoutY="479.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <RadioButton fx:id="inHouseRadioButton" layoutX="381.0" layoutY="112.0" mnemonicParsing="false" onAction="#inHouseRadioButtonAction" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgPartType" />
+         </toggleGroup>
+         <font>
+            <Font size="18.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="outsourcedRadioButton" layoutX="550.0" layoutY="112.0" mnemonicParsing="false" onAction="#outsourcedRadioButtonAction" text="Outsourced" toggleGroup="$tgPartType">
+         <font>
+            <Font size="18.0" />
+         </font></RadioButton>
+      <TextField fx:id="partIdText" editable="false" layoutX="350.0" layoutY="201.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="partNameText" layoutX="350.0" layoutY="248.0" />
+      <TextField fx:id="partInventoryText" layoutX="350.0" layoutY="292.0" />
+      <TextField fx:id="partPriceText" layoutX="350.0" layoutY="336.0" />
+      <TextField fx:id="partMaxText" layoutX="350.0" layoutY="385.0" />
+      <TextField fx:id="partIdNameText" layoutX="350.0" layoutY="475.0" />
+      <TextField fx:id="partMinText" layoutX="350.0" layoutY="429.0" />
+      <Label layoutX="102.0" layoutY="433.0" text="Min">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button layoutX="445.0" layoutY="562.0" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="49.0" prefWidth="83.0" text="Save" />
+   </children>
+</AnchorPane>
